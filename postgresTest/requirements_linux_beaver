@@ -1,0 +1,5 @@
+asgiref
+Django
+django-environ
+psycopg2==2.7.4
+sqlparse
