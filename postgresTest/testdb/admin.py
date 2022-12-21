@@ -27,5 +27,5 @@ class RestaurantsAdmin(admin.ModelAdmin):
 @admin.register(Products)
 class ProductsAdmin(admin.ModelAdmin):
     model = Products
-    list_display = ('name', 'post_data', 'user', 'category')
+    list_display = ('name', 'post_date', 'user', 'category')
 
