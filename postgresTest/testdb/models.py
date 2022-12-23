@@ -53,7 +53,7 @@ class Restaurants(models.Model):
 
 class Products(models.Model):
     name = models.CharField(max_length=200)
-    post_date = models.DateField(default=timezone.now)
+    post_date = models.DateField(default=timezone.now, null=True, blank=True)
     user = models.ForeignKey(SiteUsers, on_delete=models.CASCADE, null=True, blank=True)
     main_picture = models.ForeignKey(ProductPictures, on_delete=models.CASCADE, related_name='product_main_picture')
     # ingredient_picture = models.ForeignKey(ProductPictures, on_delete=models.CASCADE, related_name='product_ingredient_picture')
