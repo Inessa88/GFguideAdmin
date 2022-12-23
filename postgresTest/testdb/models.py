@@ -41,6 +41,8 @@ class ProductPictures(models.Model):
 class Restaurants(models.Model):
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=200)
+    lat = models.DecimalField('Latitude', max_digits=16, decimal_places=14)
+    lng = models.DecimalField('Longitude', max_digits=17, decimal_places=15)
     # user = models.ForeignKey(SiteUsers, on_delete=models.CASCADE)
 
     class Meta:
