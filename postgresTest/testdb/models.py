@@ -60,6 +60,7 @@ class Products(models.Model):
     main_picture = models.ForeignKey(ProductPictures, on_delete=models.CASCADE, related_name='product_main_picture')
     # ingredient_picture = models.ForeignKey(ProductPictures, on_delete=models.CASCADE, related_name='product_ingredient_picture')
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
+    approved = models.BooleanField(default=False)
 
     class Meta:
         db_table = "products"
